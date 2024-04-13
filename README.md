@@ -4,13 +4,13 @@ This repo provides examples of using MFA, Multivariate Functional Approximation,
 ###  Dependencies
 - C++11 or higher compiler.
 - [mfa](https://github.com/adaptive-fam/mfa), Multivariate Functional Approximations (MFA) library.
-- [MPI](http://www.mpich.org)
+- [MPI](http://www.mpich.org), Message Passing Interface
 
 ### Build
 1. Create project folder
 ```bash
-mkdir encoder
-cd encoder
+mkdir project
+cd project
 ```
 2. Get mfa library, no need to build or install it.
 ```bash
@@ -25,13 +25,12 @@ cd build
 cmake ..  \
 -DCMAKE_CXX_COMPILER=mpicxx \
 -DMFA_INCLUDE_DIR=path_to_mfa_include_folder
+make
 ```
 *path_to_mfa_include_folder* is the folder location in the project folder in step 2.
 ### MFA Modeling
 Encoding raw volumetric data into MFA model. *fixed* is the program encoding raw volumetric data into MFA model.
-* Synthetic data
 ```bash
-cd data
-../build/src/fixed/fixed -m 3 -d 4 -i sinc -n 8 -v 8 -q 2
+./build/src/fixed/fixed -m 3 -d 4 -i sinc -n 8 -v 8 -q 2
 ```
 Above operation encodes 3D sinc volume data into micro-model named test.mfab. using number of control points of 8 and polynomial degree of 2. Detail options of encoding can be checked using *-h* flag.
