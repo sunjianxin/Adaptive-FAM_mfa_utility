@@ -14,7 +14,7 @@ cd project
 ```
 2. Get mfa library, no need to build or install it.
 ```bash
-git clone https://github.com/adaptive-fam/mfa
+git clone https://github.com/sunjianxin/Adaptive-FAM_mfa.git
 ```
 3. Get and build code
 ```bash
